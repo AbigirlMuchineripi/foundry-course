@@ -11,16 +11,12 @@ contract SimpleStorage {
     string name;
 
  }
-  //dynamic array has empty parameters
+ //dynamic array has empty parameters
  // static array has a parameter
  Person[] public listOfPeople;//[]
- 
-//  Person public pat = Person({favoriteNumber: 7, name:"Pat"});
-//  Person public mariah = Person({favoriteNumber: 16, name:"Mariah"});
-//  Person public jon = Person({favoriteNumber: 12, name:"Jon"}); 
-// to save time listOfPeople is created
-   
 
+ //mapping is like a dictionary with all keys
+ mapping(string => uint256) public nameToFavoriteNumber;
 
  function store(uint256 _favoriteNumber) public{
    myFavoriteNumber = _favoriteNumber;
@@ -30,7 +26,10 @@ contract SimpleStorage {
  function retrieve() public view returns(uint256){
     return myFavoriteNumber;
  }
+ //calldata, memory, storage,stack,code,logs
  function addPerson(string memory _name, uint256 _favoriteNumber) public{
-   listOfPeople.push(Person(_favoriteNumber, _name));
+     listOfPeople.push(Person(_favoriteNumber, _name));
+     nameToFavoriteNumber[_name] = _favoriteNumber;
  }
+
 }
