@@ -35,7 +35,13 @@ contract SimpleStorage {
 
 }
 contract StorageFactory{
+    //uint256 public favoriteNumber
+    //type visibility name
+    SimpleStorage public simpleStorage;
+
+
     function createSimpleStorageContract() public{
-        // how does the storage factory know what simple storage looks like?
+        simpleStorage = new SimpleStorage();
+        
     }
 }
