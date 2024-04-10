@@ -21,12 +21,10 @@ contract StorageFactory{
         // to interact with the contract you need
         //Address
         //ABI (application binary interface) (technically a lie, you need the function selector)
-        SimpleStorage mySimpleStorage = listOfSimpleStorageContracts[_simpleStorageIndex];
-        mySimpleStorage.store(_newSimpleStorageNumber);
+         listOfSimpleStorageContracts[_simpleStorageIndex].store(_newSimpleStorageNumber);
     }
     function sfGet(uint256 _simpleStorageIndex) public view returns(uint256){
-        SimpleStorage mySimpleStorage = listOfSimpleStorageContracts[_simpleStorageIndex];
-        return mySimpleStorage.retrieve();
+        return listOfSimpleStorageContracts[_simpleStorageIndex].retrieve();
     }
 
 } 
