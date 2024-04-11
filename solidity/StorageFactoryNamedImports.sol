@@ -17,7 +17,7 @@ contract StorageFactory{
         listOfSimpleStorageContracts.push(newSimpleStorageContract);
         
     }
-    function sfStore(uint256 _simpleStorageIndex, uint256 _newSimpleStorageNumber) public{
+    function sfStore(uint256 _simpleStorageIndex, uint256 _newSimpleStorageNumber) public  virtual{
         // to interact with the contract you need
         //Address
         //ABI (application binary interface) (technically a lie, you need the function selector)
