@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: MIT  //declare a license at the beginning
+// SPDX-License-Identifier: MIT  
 pragma solidity ^0.8.18; // solidity versions
 
 contract SimpleStorage {
